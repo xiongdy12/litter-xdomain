@@ -1,0 +1,25 @@
+citra: 37277
+pasangan kandidat (cos >= 0.9): 79118
+mask statis plitterstreet: 0.0% area dibuang dari ORB (kap mobil/overlay) -> audit/static_mask_plitterstreet.png
+mask statis rolid: 10.0% area dibuang dari ORB (kap mobil/overlay) -> audit/static_mask_rolid.png
+diverifikasi ORB/RANSAC: 13813 pasangan (dataset kendaraan: selalu diverifikasi, tanpa terima-otomatis)
+duplikat ANTAR dataset: 0 pasangan {} -> 0 citra dilarang masuk test
+
+=== AUDIT SPLIT RESMI (near-duplicate terverifikasi ATAU satu video/rekaman yang sama) ===
+plastopol      test resmi:   484 citra | punya near-dup di train:   0.0% | video/rekaman sama dgn train:   0.0% | total bocor:   0.0%
+coxpwd         val  resmi:   414 citra | punya near-dup di train:  20.5% | video/rekaman sama dgn train:   0.0% | total bocor:  20.5%
+coxpwd         test resmi:   414 citra | punya near-dup di train:  23.2% | video/rekaman sama dgn train:   0.0% | total bocor:  23.2%
+bepli          val  resmi:   742 citra | punya near-dup di train:   0.8% | video/rekaman sama dgn train:   0.0% | total bocor:   0.8%
+bepli          test resmi:   741 citra | punya near-dup di train:   0.0% | video/rekaman sama dgn train:   0.0% | total bocor:   0.0%
+plitterstreet  val  resmi:  1382 citra | punya near-dup di train:   9.6% | video/rekaman sama dgn train:  90.6% | total bocor:  99.1%
+plitterstreet  test resmi:  1391 citra | punya near-dup di train:   9.3% | video/rekaman sama dgn train:  92.0% | total bocor:  99.3%
+rolid          val  resmi:  1201 citra | punya near-dup di train:  14.2% | video/rekaman sama dgn train:  59.8% | total bocor:  59.8%
+rolid          test resmi:  2373 citra | punya near-dup di train:   6.4% | video/rekaman sama dgn train:  58.2% | total bocor:  58.3%
+
+=== SPLIT BARU (berbasis grup, 70/15/15) ===
+bepli          grup awal   3709 -> setelah gabung duplikat   3697 | grup terbesar 2 citra (0.1%) | train/val/test = 70.0%/15.0%/15.0% | xdup dikeluarkan dari val/test: 0
+coxpwd         grup awal   4195 -> setelah gabung duplikat   3488 | grup terbesar 8 citra (0.2%) | train/val/test = 70.0%/15.0%/15.0% | xdup dikeluarkan dari val/test: 0
+plastopol      grup awal   2418 -> setelah gabung duplikat   2417 | grup terbesar 2 citra (0.1%) | train/val/test = 70.0%/15.0%/15.0% | xdup dikeluarkan dari val/test: 0
+plitterstreet  grup awal   1332 -> setelah gabung duplikat    546 | grup terbesar 397 citra (2.9%) | train/val/test = 70.0%/15.0%/15.0% | xdup dikeluarkan dari val/test: 0
+rolid          grup awal     84 -> setelah gabung duplikat     55 | grup terbesar 3115 citra (26.9%) | train/val/test = 70.0%/15.0%/15.0% | xdup dikeluarkan dari val/test: 0
+taco           grup awal   1500 -> setelah gabung duplikat   1493 | grup terbesar 2 citra (0.1%) | train/val/test = 70.0%/15.0%/15.0% | xdup dikeluarkan dari val/test: 0
